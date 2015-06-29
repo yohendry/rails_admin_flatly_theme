@@ -11,10 +11,16 @@
 // --------------------------------------------------
 
 @import url(https://fonts.googleapis.com/css?family=Didact+Gothic&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+.rails_admin {
+  font-family:RobotoDraft,Roboto,'Helvetica Neue',sans-serif
+}
 
 h1 {
-  font-size: 48px;
-  font-weight: 900;
+  font-weight: 300;
+  font-size: 54px;
+  color: #3F51B5;
+  margin: 20px 0;
 }
 
 h2 {
@@ -67,6 +73,8 @@ p {
     .navbar:hover {
       color: $linkColorHover;
     }
+
+
   }
 
   .navbar-inner {
@@ -159,6 +167,32 @@ div.subnav {
     background: none;
     border-bottom: 2px solid $dropdownDividerBottom;
   }
+
+  li > a{
+    color: #bbb;
+    height: 35px;
+    font-size: 14px;
+
+    line-height: 35px;
+  }
+  li > a:hover{
+    color: white;
+    font-weight: bolder;
+    background-color: #252833;
+  }
+
+  li > a:focus{
+    color: white;
+    font-weight: bolder;
+    background-color: #252833;
+  }
+
+  li.active  > a{
+    background-color: #324150;
+    color: white;
+    font-weight: bolder;
+  }
+
 }
 
 .nav-header { font-size: $fontSizeMini; }
@@ -524,6 +558,14 @@ legend {
 
 }
 
+.well.sidebar-nav {
+  border: none;
+  @include box-shadow(none);
+  background-color:#252833;
+  margin-left: -20px;
+  width:220px;
+}
+
 .progress {
 
   background: $grayLighter;
@@ -642,7 +684,6 @@ legend {
       color: $white;
 
       &:hover {
-        color: $green;
         background-color: $blueDark;
       }
     }
@@ -666,4 +707,54 @@ legend {
 }
 
 //  OTHER RULES
-body.rails_admin { padding-top: $navbarHeight + 20 }
+body.rails_admin { padding-top: $navbarHeight}
+
+div#list {
+  background-color: #fff;
+  padding:10px;
+  color: #000;
+}
+
+body.rails_admin {
+  .container-fluid {
+    .row-fluid {
+      .span3 {
+        width: 220px;
+      }
+    }
+  }
+
+  .navbar .brand {
+    text-transform: uppercase;
+
+    small {
+      color: #FF4D00;
+      font-weight: bold;
+      line-height: 1;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.nav-tabs {
+  li.icon {
+    background-color: #fff;
+  }
+
+  li.dropdown {
+    background-color: #fff;
+  }
+}
+
+.form-horizontal  {
+  background-color: #fff;
+  padding:10px;
+}
+
+.help-block {
+  color: #000;
+}
+
+.page-header {
+  margin-top: 66px;
+}

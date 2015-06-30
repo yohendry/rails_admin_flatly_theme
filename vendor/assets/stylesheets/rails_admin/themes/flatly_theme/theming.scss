@@ -749,3 +749,9 @@ body.rails_admin {
 .page-header {
   margin-top: 66px;
 }
+
+.root_links {
+  li {
+    img {display:none}
+  }
+}
